@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10112" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2SB-wZ-2c0">
+                                <rect key="frame" x="10" y="28" width="355" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="dTN-AD-wt4"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="红"/>
+                                    <segment title="绿"/>
+                                    <segment title="蓝"/>
+                                    <segment title="黄"/>
+                                    <segment title="紫"/>
+                                    <segment title="白"/>
+                                    <segment title="黑"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="MMM-mo-ezq"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K35-Ip-uUQ" customClass="CustomView">
+                                <rect key="frame" x="0.0" y="58" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eRL-cf-99V">
+                                <rect key="frame" x="20" y="625" width="335" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="W0D-Tg-CJw"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="铅笔"/>
+                                    <segment title="直线"/>
+                                    <segment title="圆"/>
+                                    <segment title="圆角矩形"/>
+                                    <segment title="矩形"/>
+                                </segments>
+                                <connections>
+                                    <action selector="shapeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="kVt-hr-CzS"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K35-Ip-uUQ" firstAttribute="top" secondItem="2SB-wZ-2c0" secondAttribute="bottom" constant="2" id="61b-Qf-qGo"/>
+                            <constraint firstItem="K35-Ip-uUQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Jc-Nb-YAp"/>
+                            <constraint firstAttribute="trailing" secondItem="2SB-wZ-2c0" secondAttribute="trailing" constant="10" id="ErO-rt-vLe"/>
+                            <constraint firstItem="2SB-wZ-2c0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Gar-sa-bOY"/>
+                            <constraint firstAttribute="trailing" secondItem="eRL-cf-99V" secondAttribute="trailing" constant="20" id="aSH-jn-QmS"/>
+                            <constraint firstAttribute="trailing" secondItem="K35-Ip-uUQ" secondAttribute="trailing" id="hXe-yv-Bap"/>
+                            <constraint firstItem="eRL-cf-99V" firstAttribute="top" secondItem="K35-Ip-uUQ" secondAttribute="bottom" id="mbx-ZP-a8f"/>
+                            <constraint firstItem="2SB-wZ-2c0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pdz-HB-23C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eRL-cf-99V" secondAttribute="bottom" constant="14" id="xux-ms-SjS"/>
+                            <constraint firstItem="eRL-cf-99V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zNO-yh-pwM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="customView" destination="K35-Ip-uUQ" id="O9M-ub-dUQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245.5" y="261.5"/>
+        </scene>
+    </scenes>
+</document>
